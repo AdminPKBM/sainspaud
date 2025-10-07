@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Sains PAUD - Untuk Guru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .bounce-in {
+            animation: bounceIn 0.8s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.1); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .pulse-gentle {
+            animation: pulseGentle 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGentle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .slide-up {
+            animation: slideUp 0.6s ease-out;
+        }
+        
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        .rainbow-text {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow 3s ease infinite;
+        }
+        
+        @keyframes rainbow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .gradient-bg-1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-bg-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .gradient-bg-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .gradient-bg-4 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .gradient-bg-5 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .sparkle {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sparkle::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: sparkle 2s infinite;
+        }
+        
+        @keyframes sparkle {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+        
+        .step-number {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .safety-badge {
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            border: 2px solid #ff6b6b;
+        }
+        
+        .age-badge {
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            border: 2px solid #4ecdc4;
+        }
+        
+        .time-badge {
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            border: 2px solid #feca57;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-6">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <div class="relative">
+                <h1 class="text-5xl font-bold rainbow-text mb-4 float">🔬 Panduan Sains PAUD 🧪</h1>
+                <div class="absolute -top-2 -right-2 text-4xl pulse-gentle">⚗️</div>
+                <div class="absolute -top-4 -left-4 text-3xl float">🌟</div>
+            </div>
+            <p class="text-2xl text-purple-700 font-semibold mb-4">Panduan Lengkap Eksperimen Sains untuk Guru PAUD</p>
+            <div class="flex justify-center space-x-4 text-3xl">
+                <span class="float" style="animation-delay: 0.1s">🧬</span>
+                <span class="float" style="animation-delay: 0.2s">🔍</span>
+                <span class="float" style="animation-delay: 0.3s">🌈</span>
+                <span class="float" style="animation-delay: 0.4s">⭐</span>
+            </div>
+        </div>
+
+        <!-- Menu Utama -->
+        <div id="mainMenu" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div class="gradient-bg-1 rounded-3xl p-6 shadow-xl card-hover cursor-pointer sparkle" onclick="showSection('physics')">
+                <div class="text-center text-white">
+                    <div class="text-6xl mb-4 pulse-gentle">⚽</div>
+                    <h3 class="text-2xl font-bold mb-3">Fisika Sederhana</h3>
+                    <p class="text-sm opacity-90">Gravitasi, magnet, dan gerakan</p>
+                    <div class="mt-3 text-lg">🎯 8 Eksperimen</div>
+                </div>
+            </div>
+            
+            <div class="gradient-bg-2 rounded-3xl p-6 shadow-xl card-hover cursor-pointer sparkle" onclick="showSection('chemistry')">
+                <div class="text-center text-white">
+                    <div class="text-6xl mb-4 float">🧪</div>
+                    <h3 class="text-2xl font-bold mb-3">Kimia Aman</h3>
+                    <p class="text-sm opacity-90">Reaksi sederhana dan aman</p>
+                    <div class="mt-3 text-lg">⚗️ 6 Eksperimen</div>
+                </div>
+            </div>
+            
+            <div class="gradient-bg-3 rounded-3xl p-6 shadow-xl card-hover cursor-pointer sparkle" onclick="showSection('biology')">
+                <div class="text-center text-white">
+                    <div class="text-6xl mb-4 pulse-gentle">🌱</div>
+                    <h3 class="text-2xl font-bold mb-3">Biologi Alam</h3>
+                    <p class="text-sm opacity-90">Tumbuhan dan kehidupan</p>
+                    <div class="mt-3 text-lg">🍃 7 Eksperimen</div>
+                </div>
+            </div>
+            
+            <div class="gradient-bg-4 rounded-3xl p-6 shadow-xl card-hover cursor-pointer sparkle" onclick="showSection('weather')">
+                <div class="text-center text-white">
+                    <div class="text-6xl mb-4 float">🌤️</div>
+                    <h3 class="text-2xl font-bold mb-3">Cuaca & Iklim</h3>
+                    <p class="text-sm opacity-90">Hujan, angin, dan awan</p>
+                    <div class="mt-3 text-lg">☁️ 5 Eksperimen</div>
+                </div>
+            </div>
+            
+            <div class="gradient-bg-5 rounded-3xl p-6 shadow-xl card-hover cursor-pointer sparkle" onclick="showSection('senses')">
+                <div class="text-center text-white">
+                    <div class="text-6xl mb-4 pulse-gentle">👁️</div>
+                    <h3 class="text-2xl font-bold mb-3">Panca Indera</h3>
+                    <p class="text-sm opacity-90">Melihat, mendengar, merasa</p>
+                    <div class="mt-3 text-lg">👂 6 Eksperimen</div>
+                </div>
+            </div>
+            
+            <div class="gradient-bg-1 rounded-3xl p-6 shadow-xl card-hover cursor-pointer sparkle" onclick="showSection('lesson-plans')">
+                <div class="text-center text-white">
+                    <div class="text-6xl mb-4 float">📋</div>
+                    <h3 class="text-2xl font-bold mb-3">Rencana Pembelajaran</h3>
+                    <p class="text-sm opacity-90">Template siap pakai</p>
+                    <div class="mt-3 text-lg">📝 10 Template</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Fisika -->
+        <div id="physics" class="hidden">
+            <div class="bg-white rounded-3xl p-8 shadow-xl mb-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-4xl font-bold text-blue-800">⚽ Fisika Sederhana</h2>
+                    <button onclick="showSection('main')" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-full transition-colors text-lg">
+                        ← Kembali
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="physicsExperiments">
+                    <!-- Akan diisi oleh JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Kimia -->
+        <div id="chemistry" class="hidden">
+            <div class="bg-white rounded-3xl p-8 shadow-xl mb-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-4xl font-bold text-pink-800">🧪 Kimia Aman</h2>
+                    <button onclick="showSection('main')" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-full transition-colors text-lg">
+                        ← Kembali
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="chemistryExperiments">
+                    <!-- Akan diisi oleh JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Biologi -->
+        <div id="biology" class="hidden">
+            <div class="bg-white rounded-3xl p-8 shadow-xl mb-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-4xl font-bold text-green-800">🌱 Biologi Alam</h2>
+                    <button onclick="showSection('main')" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-full transition-colors text-lg">
+                        ← Kembali
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="biologyExperiments">
+                    <!-- Akan diisi oleh JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Cuaca -->
+        <div id="weather" class="hidden">
+            <div class="bg-white rounded-3xl p-8 shadow-xl mb-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-4xl font-bold text-cyan-800">🌤️ Cuaca & Iklim</h2>
+                    <button onclick="showSection('main')" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-full transition-colors text-lg">
+                        ← Kembali
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="weatherExperiments">
+                    <!-- Akan diisi oleh JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Panca Indera -->
+        <div id="senses" class="hidden">
+            <div class="bg-white rounded-3xl p-8 shadow-xl mb-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-4xl font-bold text-purple-800">👁️ Panca Indera</h2>
+                    <button onclick="showSection('main')" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-full transition-colors text-lg">
+                        ← Kembali
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="sensesExperiments">
+                    <!-- Akan diisi oleh JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Bagian Rencana Pembelajaran -->
+        <div id="lesson-plans" class="hidden">
+            <div class="bg-white rounded-3xl p-8 shadow-xl mb-6">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-4xl font-bold text-indigo-800">📋 Rencana Pembelajaran</h2>
+                    <button onclick="showSection('main')" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-full transition-colors text-lg">
+                        ← Kembali
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="lessonPlans">
+                    <!-- Akan diisi oleh JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Detail Eksperimen -->
+        <div id="experimentModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+            <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto bounce-in">
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-800 mb-2" id="modalTitle">Judul Eksperimen</h3>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="safety-badge px-3 py-1 rounded-full text-sm font-semibold" id="modalSafety">Aman</span>
+                                <span class="age-badge px-3 py-1 rounded-full text-sm font-semibold" id="modalAge">3-6 tahun</span>
+                                <span class="time-badge px-3 py-1 rounded-full text-sm font-semibold" id="modalTime">15 menit</span>
+                            </div>
+                        </div>
+                        <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-3xl">×</button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Kolom Kiri -->
+                        <div>
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold text-blue-600 mb-3">🎯 Tujuan Pembelajaran</h4>
+                                <p class="text-gray-700 leading-relaxed" id="modalObjective"></p>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold text-green-600 mb-3">🛠️ Alat & Bahan</h4>
+                                <ul class="space-y-2" id="modalMaterials"></ul>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold text-red-600 mb-3">⚠️ Keselamatan</h4>
+                                <div class="bg-red-50 border-l-4 border-red-400 p-4 rounded">
+                                    <ul class="space-y-1 text-red-700" id="modalSafetyTips"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Kolom Kanan -->
+                        <div>
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold text-purple-600 mb-3">📝 Langkah-langkah</h4>
+                                <div class="space-y-4" id="modalSteps"></div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-xl font-bold text-orange-600 mb-3">🔍 Penjelasan Sains</h4>
+                                <div class="bg-orange-50 border-l-4 border-orange-400 p-4 rounded">
+                                    <p class="text-orange-800" id="modalExplanation"></p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-xl font-bold text-teal-600 mb-3">💡 Tips untuk Guru</h4>
+                                <div class="bg-teal-50 border-l-4 border-teal-400 p-4 rounded">
+                                    <ul class="space-y-1 text-teal-700" id="modalTips"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data eksperimen fisika
+        const physicsExperiments = [
+            {
+                title: "Balon Ajaib Anti Gravitasi",
+                emoji: "🎈",
+                age: "3-6 tahun",
+                time: "10 menit",
+                safety: "Sangat Aman",
+                objective: "Anak memahami konsep listrik statis dan gaya tarik-menarik benda ringan",
+                materials: ["Balon", "Potongan kertas kecil", "Kain wol atau rambut"],
+                safetyTips: ["Pastikan balon tidak pecah di dekat wajah", "Awasi anak saat menggosok balon"],
+                steps: [
+                    "Tiup balon dan ikat dengan rapat",
+                    "Sobek kertas menjadi potongan-potongan kecil",
+                    "Gosok balon ke rambut atau kain wol selama 10 detik",
+                    "Dekatkan balon ke potongan kertas",
+                    "Amati kertas 'melompat' ke balon"
+                ],
+                explanation: "Ketika balon digosok, elektron berpindah dan menciptakan muatan listrik statis. Muatan ini menarik benda-benda ringan seperti kertas.",
+                tips: ["Lakukan di hari yang tidak terlalu lembab", "Biarkan anak mencoba sendiri", "Tanyakan prediksi anak sebelum eksperimen"]
+            },
+            {
+                title: "Magnet Ajaib Mencari Teman",
+                emoji: "🧲",
+                age: "4-6 tahun",
+                time: "15 menit",
+                safety: "Aman",
+                objective: "Anak mengenal sifat magnet dan benda-benda yang dapat ditarik magnet",
+                materials: ["Magnet batang", "Klip kertas", "Koin", "Pensil", "Sendok plastik", "Paku kecil"],
+                safetyTips: ["Gunakan magnet yang tidak terlalu kuat", "Jauhkan dari perangkat elektronik"],
+                steps: [
+                    "Siapkan berbagai benda di atas meja",
+                    "Minta anak menebak benda mana yang akan menempel",
+                    "Dekatkan magnet ke setiap benda satu per satu",
+                    "Kelompokkan benda yang menempel dan tidak menempel",
+                    "Diskusikan pola yang ditemukan"
+                ],
+                explanation: "Magnet hanya menarik benda-benda yang mengandung logam tertentu seperti besi, nikel, dan kobalt. Benda plastik, kayu, dan kertas tidak tertarik magnet.",
+                tips: ["Buat permainan tebak-tebakan", "Ajak anak mencari benda magnetis di sekitar", "Ceritakan tentang kompas"]
+            },
+            {
+                title: "Air Menari di Gelas",
+                emoji: "💧",
+                age: "3-5 tahun",
+                time: "8 menit",
+                safety: "Sangat Aman",
+                objective: "Anak memahami konsep tegangan permukaan air dan kohesi molekul",
+                materials: ["Gelas bening", "Air", "Koin", "Pipet atau sendok kecil"],
+                safetyTips: ["Gunakan air bersih", "Siapkan lap untuk membersihkan tumpahan"],
+                steps: [
+                    "Isi gelas dengan air hingga hampir penuh",
+                    "Perlahan tambahkan air tetes demi tetes",
+                    "Amati permukaan air yang 'menggembung' di atas bibir gelas",
+                    "Hitung berapa tetes lagi sebelum air tumpah",
+                    "Letakkan koin perlahan di permukaan air"
+                ],
+                explanation: "Molekul air saling tarik-menarik (kohesi) membentuk 'kulit' tipis di permukaan yang disebut tegangan permukaan. Ini membuat air bisa 'menggembung' tanpa tumpah.",
+                tips: ["Lakukan perlahan agar anak bisa mengamati", "Bandingkan dengan cairan lain", "Jelaskan mengapa serangga bisa berjalan di air"]
+            },
+            {
+                title: "Roket Balon Sederhana",
+                emoji: "🚀",
+                age: "4-6 tahun",
+                time: "12 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami hukum aksi-reaksi Newton dan prinsip dorongan",
+                materials: ["Balon panjang", "Benang/tali", "Sedotan", "Selotip"],
+                safetyTips: ["Pastikan lintasan bebas dari penghalang", "Awasi anak saat melepas balon"],
+                steps: [
+                    "Ikat benang dari satu ujung ruangan ke ujung lain",
+                    "Masukkan benang melalui sedotan",
+                    "Tiup balon tapi jangan diikat, jepit ujungnya",
+                    "Tempelkan balon ke sedotan dengan selotip",
+                    "Lepaskan jepitan dan lihat balon 'terbang'"
+                ],
+                explanation: "Udara yang keluar dari balon mendorong ke belakang (aksi), sehingga balon terdorong ke depan (reaksi). Ini sama dengan prinsip roket sungguhan.",
+                tips: ["Coba dengan ukuran balon berbeda", "Diskusikan arah gerakan", "Hubungkan dengan pesawat dan roket"]
+            },
+            {
+                title: "Pendulum Hipnotis",
+                emoji: "⏰",
+                age: "5-6 tahun",
+                time: "15 menit",
+                safety: "Aman",
+                objective: "Anak memahami konsep gravitasi, ayunan, dan pola gerakan teratur",
+                materials: ["Benang 30cm", "Benda kecil (kelereng/koin)", "Penggaris", "Stopwatch/timer"],
+                safetyTips: ["Pastikan benda terikat kuat", "Lakukan di area yang aman"],
+                steps: [
+                    "Ikat benda kecil di ujung benang",
+                    "Pegang ujung benang dan biarkan benda menggantung",
+                    "Tarik benda ke samping dan lepaskan",
+                    "Hitung berapa kali ayunan dalam 10 detik",
+                    "Coba dengan panjang benang berbeda"
+                ],
+                explanation: "Gravitasi menarik benda ke bawah, tetapi benang mencegahnya jatuh. Energi berubah dari potensial (di puncak) menjadi kinetik (saat bergerak).",
+                tips: ["Buat pola ayunan berbeda", "Bandingkan dengan jam pendulum", "Diskusikan mengapa ayunan melambat"]
+            },
+            {
+                title: "Cermin Ajaib Simetri",
+                emoji: "🪞",
+                age: "3-6 tahun",
+                time: "10 menit",
+                safety: "Hati-hati",
+                objective: "Anak memahami konsep refleksi cahaya dan simetri",
+                materials: ["Cermin kecil", "Gambar setengah wajah", "Pensil", "Kertas"],
+                safetyTips: ["Gunakan cermin plastik atau bingkai aman", "Awasi anak saat memegang cermin"],
+                steps: [
+                    "Gambar setengah wajah di kertas",
+                    "Letakkan cermin tegak di tengah gambar",
+                    "Amati wajah 'lengkap' di cermin",
+                    "Coba dengan bentuk geometri sederhana",
+                    "Buat anak menggambar setengah bentuk"
+                ],
+                explanation: "Cermin memantulkan cahaya dengan sudut yang sama. Ini menciptakan bayangan yang tampak seperti melengkapi gambar setengah.",
+                tips: ["Gunakan objek simetris dari alam", "Buat permainan tebak bentuk", "Jelaskan mengapa kita melihat diri di cermin"]
+            },
+            {
+                title: "Roda Warna Berputar",
+                emoji: "🌈",
+                age: "4-6 tahun",
+                time: "20 menit",
+                safety: "Aman",
+                objective: "Anak memahami pencampuran warna dan efek visual gerakan",
+                materials: ["Kertas karton bulat", "Crayon/spidol warna", "Benang", "Gunting"],
+                safetyTips: ["Bantu anak menggunakan gunting", "Pastikan benang tidak melilit"],
+                steps: [
+                    "Gambar lingkaran besar di karton",
+                    "Bagi menjadi 6-8 bagian seperti pizza",
+                    "Warnai setiap bagian dengan warna berbeda",
+                    "Buat 2 lubang di tengah dan masukkan benang",
+                    "Putar cepat dan amati warna yang 'menyatu'"
+                ],
+                explanation: "Mata kita tidak bisa mengikuti warna yang berputar cepat, sehingga semua warna tampak bercampur menjadi putih atau abu-abu.",
+                tips: ["Coba pola warna berbeda", "Diskusikan warna primer dan sekunder", "Hubungkan dengan pelangi"]
+            },
+            {
+                title: "Jembatan Kertas Kuat",
+                emoji: "🌉",
+                age: "5-6 tahun",
+                time: "25 menit",
+                safety: "Aman",
+                objective: "Anak memahami konsep kekuatan struktur dan distribusi beban",
+                materials: ["Kertas A4", "2 tumpukan buku", "Koin atau benda kecil", "Selotip"],
+                safetyTips: ["Pastikan tumpukan buku stabil", "Hati-hati saat menambah beban"],
+                steps: [
+                    "Letakkan 2 tumpukan buku dengan jarak 20cm",
+                    "Coba letakkan kertas datar sebagai jembatan",
+                    "Tambahkan koin di atas kertas (akan jatuh)",
+                    "Lipat kertas seperti akordeon/zigzag",
+                    "Coba lagi dengan kertas terlipat (lebih kuat!)"
+                ],
+                explanation: "Melipat kertas menciptakan struktur yang lebih kaku dan mendistribusikan beban ke seluruh permukaan, membuat jembatan lebih kuat.",
+                tips: ["Coba bentuk lipatan berbeda", "Bandingkan dengan jembatan sungguhan", "Diskusikan mengapa gedung punya rangka besi"]
+            }
+        ];
+
+        // Data eksperimen kimia
+        const chemistryExperiments = [
+            {
+                title: "Gunung Berapi Baking Soda",
+                emoji: "🌋",
+                age: "4-6 tahun",
+                time: "15 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami reaksi kimia sederhana dan pembentukan gas",
+                materials: ["Baking soda 2 sdm", "Cuka putih 50ml", "Pewarna makanan merah", "Botol kecil", "Tanah liat/plastisin"],
+                safetyTips: ["Lakukan di area terbuka atau wastafel", "Jangan sampai terkena mata", "Cuci tangan setelah eksperimen"],
+                steps: [
+                    "Bentuk gunung dari tanah liat mengelilingi botol",
+                    "Masukkan baking soda ke dalam botol",
+                    "Tambahkan 2-3 tetes pewarna merah",
+                    "Tuang cuka perlahan ke dalam botol",
+                    "Amati 'letusan' gunung berapi"
+                ],
+                explanation: "Baking soda (basa) bereaksi dengan cuka (asam) menghasilkan gas karbon dioksida yang mendorong cairan keluar seperti letusan gunung berapi.",
+                tips: ["Ceritakan tentang gunung berapi sungguhan", "Coba dengan pewarna berbeda", "Ulangi beberapa kali untuk efek dramatis"]
+            },
+            {
+                title: "Susu Warna-warni Menari",
+                emoji: "🥛",
+                age: "3-5 tahun",
+                time: "10 menit",
+                safety: "Sangat Aman",
+                objective: "Anak memahami sifat sabun sebagai emulsifier dan tegangan permukaan",
+                materials: ["Susu cair 200ml", "Pewarna makanan 4 warna", "Cotton bud", "Sabun cuci piring cair"],
+                safetyTips: ["Gunakan susu yang masih baik", "Jangan diminum setelah eksperimen"],
+                steps: [
+                    "Tuang susu ke dalam piring datar",
+                    "Teteskan 4 warna berbeda di 4 titik tepi piring",
+                    "Celupkan cotton bud ke sabun cuci piring",
+                    "Sentuh salah satu tetesan warna dengan cotton bud bersabun",
+                    "Amati warna 'berlari' dan bercampur"
+                ],
+                explanation: "Sabun memecah molekul lemak dalam susu dan mengurangi tegangan permukaan, menyebabkan warna bergerak mengikuti aliran molekul.",
+                tips: ["Coba dengan susu berbeda kadar lemak", "Gunakan sabun berbeda", "Buat pola dengan menyentuh beberapa titik"]
+            },
+            {
+                title: "Es Krim Instan Ajaib",
+                emoji: "🍦",
+                age: "4-6 tahun",
+                time: "20 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami konsep titik beku dan perubahan wujud zat",
+                materials: ["Susu cair 100ml", "Gula 1 sdm", "Vanilla 1/2 sdt", "Es batu banyak", "Garam dapur 3 sdm", "2 kantong plastik ziplock"],
+                safetyTips: ["Gunakan sarung tangan saat memegang es", "Pastikan kantong tertutup rapat"],
+                steps: [
+                    "Campur susu, gula, dan vanilla dalam kantong kecil",
+                    "Tutup rapat kantong pertama",
+                    "Isi kantong besar dengan es batu dan garam",
+                    "Masukkan kantong kecil ke dalam kantong besar",
+                    "Kocok kuat selama 10-15 menit hingga membeku"
+                ],
+                explanation: "Garam menurunkan titik beku es, membuat suhu lebih dingin dari 0°C. Suhu dingin ini membekukan campuran susu menjadi es krim.",
+                tips: ["Bungkus dengan handuk agar tidak terlalu dingin", "Coba rasa berbeda", "Jelaskan mengapa jalan diberi garam saat salju"]
+            },
+            {
+                title: "Slime Elastis Ajaib",
+                emoji: "🟢",
+                age: "5-6 tahun",
+                time: "15 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami polimer dan perubahan sifat bahan saat dicampur",
+                materials: ["Lem putih 100ml", "Air 50ml", "Borax 1/2 sdt", "Pewarna makanan", "Mangkuk", "Sendok"],
+                safetyTips: ["Cuci tangan sebelum dan sesudah", "Jangan masukkan ke mulut", "Simpan dalam wadah tertutup"],
+                steps: [
+                    "Campur lem putih dengan air dalam mangkuk",
+                    "Tambahkan pewarna makanan sesuai selera",
+                    "Aduk rata hingga warna merata",
+                    "Tambahkan borax sedikit demi sedikit sambil diaduk",
+                    "Aduk terus hingga tekstur berubah menjadi kenyal"
+                ],
+                explanation: "Borax menghubungkan molekul-molekul lem membentuk rantai panjang (polimer) yang membuat tekstur berubah dari cair menjadi elastis.",
+                tips: ["Coba rasio berbeda untuk tekstur berbeda", "Bandingkan dengan bahan elastis lain", "Simpan dalam kulkas agar awet"]
+            },
+            {
+                title: "Kristal Garam Cantik",
+                emoji: "💎",
+                age: "5-6 tahun",
+                time: "30 menit + 3 hari",
+                safety: "Aman",
+                objective: "Anak memahami proses kristalisasi dan evaporasi",
+                materials: ["Garam dapur 200g", "Air panas 200ml", "Benang wol", "Pensil", "Gelas bening", "Pewarna makanan"],
+                safetyTips: ["Hati-hati dengan air panas", "Letakkan di tempat aman dari jangkauan"],
+                steps: [
+                    "Larutkan garam dalam air panas hingga jenuh",
+                    "Tambahkan pewarna makanan (opsional)",
+                    "Ikat benang di pensil, celupkan ujung benang ke larutan",
+                    "Letakkan gelas di tempat yang tidak terganggu",
+                    "Tunggu 3-5 hari hingga kristal terbentuk"
+                ],
+                explanation: "Saat air menguap, garam yang terlarut mengendap dan membentuk kristal dengan pola geometris yang teratur pada benang.",
+                tips: ["Foto perkembangan setiap hari", "Coba dengan gula atau garam epsom", "Jelaskan tentang kristal di alam"]
+            },
+            {
+                title: "Indikator pH Alami",
+                emoji: "🟣",
+                age: "5-6 tahun",
+                time: "25 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami konsep asam-basa melalui perubahan warna alami",
+                materials: ["Kubis ungu 3 lembar", "Air panas 200ml", "Cuka", "Baking soda", "Sabun cair", "Gelas kecil 4 buah"],
+                safetyTips: ["Hati-hati dengan air panas", "Jangan minum larutan apapun"],
+                steps: [
+                    "Sobek kubis ungu dan rendam dalam air panas 10 menit",
+                    "Saring air kubis (akan berwarna ungu)",
+                    "Bagi air kubis ke 4 gelas",
+                    "Tambahkan cuka ke gelas 1, baking soda ke gelas 2, sabun ke gelas 3",
+                    "Amati perubahan warna: merah (asam), hijau (basa)"
+                ],
+                explanation: "Kubis ungu mengandung antosianin yang berubah warna tergantung tingkat keasaman (pH) larutan.",
+                tips: ["Coba dengan bahan lain seperti lemon", "Buat skala warna pH", "Jelaskan tentang makanan asam dan basa"]
+            }
+        ];
+
+        // Data eksperimen biologi
+        const biologyExperiments = [
+            {
+                title: "Kebun Kecambah Mini",
+                emoji: "🌱",
+                age: "3-6 tahun",
+                time: "15 menit + 7 hari",
+                safety: "Sangat Aman",
+                objective: "Anak memahami proses perkecambahan dan kebutuhan tumbuhan",
+                materials: ["Biji kacang hijau 10 butir", "Kapas", "2 gelas plastik", "Air", "Plastik wrap"],
+                safetyTips: ["Ganti air setiap 2 hari", "Jaga kebersihan"],
+                steps: [
+                    "Rendam biji kacang hijau dalam air hangat 2 jam",
+                    "Letakkan kapas basah di dasar gelas",
+                    "Tata biji di atas kapas",
+                    "Tutup dengan plastik wrap yang dilubangi",
+                    "Letakkan di tempat terang, amati setiap hari"
+                ],
+                explanation: "Biji memiliki cadangan makanan untuk tumbuh. Dengan air dan cahaya, biji akan berkecambah menjadi tanaman kecil.",
+                tips: ["Buat jurnal pertumbuhan harian", "Bandingkan dengan biji berbeda", "Diskusikan kebutuhan hidup tumbuhan"]
+            },
+            {
+                title: "Eksperimen Fotosintesis",
+                emoji: "🍃",
+                age: "5-6 tahun",
+                time: "20 menit + 3 hari",
+                safety: "Aman",
+                objective: "Anak memahami peran cahaya dalam pertumbuhan tumbuhan",
+                materials: ["2 tanaman kecil sejenis", "2 kotak kardus", "Gunting", "Kertas aluminium"],
+                safetyTips: ["Pastikan tanaman mendapat air", "Jangan merusak tanaman"],
+                steps: [
+                    "Siapkan 2 tanaman yang sama",
+                    "Letakkan satu tanaman di tempat terang",
+                    "Tutup tanaman kedua dengan kotak kardus",
+                    "Siram kedua tanaman sama banyak",
+                    "Amati perbedaan setelah 3-5 hari"
+                ],
+                explanation: "Tumbuhan membutuhkan cahaya untuk fotosintesis (membuat makanan). Tanpa cahaya, daun akan layu dan menguning.",
+                tips: ["Foto perkembangan harian", "Diskusikan mengapa hutan penting", "Jelaskan peran matahari"]
+            },
+            {
+                title: "Sistem Peredaran Air Tumbuhan",
+                emoji: "🌺",
+                age: "4-6 tahun",
+                time: "10 menit + 2 jam",
+                safety: "Aman",
+                objective: "Anak memahami bagaimana tumbuhan menyerap dan mengangkut air",
+                materials: ["Bunga putih (mawar/anyelir)", "Pewarna makanan", "Gelas", "Air", "Pisau (untuk guru)"],
+                safetyTips: ["Guru yang memotong batang", "Gunakan pewarna makanan yang aman"],
+                steps: [
+                    "Isi gelas dengan air dan pewarna makanan",
+                    "Potong ujung batang bunga secara miring",
+                    "Masukkan batang ke dalam air berwarna",
+                    "Tunggu 2-4 jam",
+                    "Amati perubahan warna pada kelopak bunga"
+                ],
+                explanation: "Tumbuhan memiliki pembuluh yang mengangkut air dari akar ke seluruh bagian tanaman, termasuk bunga.",
+                tips: ["Coba dengan warna berbeda", "Belah batang untuk 2 warna", "Jelaskan fungsi akar dan batang"]
+            },
+            {
+                title: "Observasi Serangga Mini",
+                emoji: "🐛",
+                age: "4-6 tahun",
+                time: "30 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak mengamati dan memahami karakteristik serangga",
+                materials: ["Kaca pembesar", "Wadah transparan", "Kertas", "Pensil", "Serangga kecil (semut/kupu-kupu)"],
+                safetyTips: ["Jangan sakiti serangga", "Lepaskan setelah observasi", "Cuci tangan setelah menyentuh"],
+                steps: [
+                    "Cari serangga kecil di taman (semut, kupu-kupu)",
+                    "Amati dengan kaca pembesar",
+                    "Hitung jumlah kaki, sayap, antena",
+                    "Gambar hasil observasi",
+                    "Lepaskan serangga kembali ke alam"
+                ],
+                explanation: "Serangga memiliki 6 kaki, 3 bagian tubuh (kepala, dada, perut), dan sering memiliki sayap serta antena.",
+                tips: ["Buat buku observasi", "Bandingkan serangga berbeda", "Diskusikan peran serangga di alam"]
+            },
+            {
+                title: "Rantai Makanan Sederhana",
+                emoji: "🍽️",
+                age: "5-6 tahun",
+                time: "20 menit",
+                safety: "Aman",
+                objective: "Anak memahami konsep rantai makanan dan saling ketergantungan makhluk hidup",
+                materials: ["Kartu gambar (rumput, kelinci, serigala, matahari)", "Benang wol", "Gunting", "Lem"],
+                safetyTips: ["Hati-hati menggunakan gunting", "Pastikan lem tidak beracun"],
+                steps: [
+                    "Tunjukkan kartu gambar matahari, rumput, kelinci, serigala",
+                    "Diskusikan siapa makan apa",
+                    "Susun urutan: matahari → rumput → kelinci → serigala",
+                    "Hubungkan dengan benang wol",
+                    "Jelaskan apa yang terjadi jika satu hilang"
+                ],
+                explanation: "Semua makhluk hidup saling bergantung untuk makanan. Tumbuhan membuat makanan dari matahari, dimakan hewan, yang dimakan hewan lain.",
+                tips: ["Buat rantai makanan lain", "Diskusikan peran manusia", "Kunjungi kebun binatang untuk contoh nyata"]
+            },
+            {
+                title: "Habitat Hewan Diorama",
+                emoji: "🏠",
+                age: "5-6 tahun",
+                time: "45 menit",
+                safety: "Aman",
+                objective: "Anak memahami konsep habitat dan adaptasi hewan terhadap lingkungan",
+                materials: ["Kotak sepatu", "Kertas warna", "Plastisin", "Miniatur hewan", "Lem", "Gunting"],
+                safetyTips: ["Awasi penggunaan gunting", "Pastikan bahan tidak beracun"],
+                steps: [
+                    "Pilih habitat (hutan, laut, gurun, kutub)",
+                    "Hias kotak sesuai habitat yang dipilih",
+                    "Buat elemen habitat (pohon, air, es, pasir)",
+                    "Letakkan hewan sesuai habitatnya",
+                    "Ceritakan mengapa hewan cocok di habitat tersebut"
+                ],
+                explanation: "Setiap hewan memiliki ciri khusus yang membantu mereka hidup di lingkungan tertentu (adaptasi).",
+                tips: ["Buat beberapa habitat berbeda", "Diskusikan ancaman habitat", "Kaitkan dengan konservasi"]
+            },
+            {
+                title: "Siklus Hidup Kupu-kupu",
+                emoji: "🦋",
+                age: "4-6 tahun",
+                time: "25 menit",
+                safety: "Aman",
+                objective: "Anak memahami metamorfosis dan siklus hidup makhluk hidup",
+                materials: ["Kertas karton", "Crayon/spidol", "Gunting", "Brad fastener", "Template lingkaran"],
+                safetyTips: ["Bantu anak menggunakan brad fastener", "Awasi penggunaan gunting"],
+                steps: [
+                    "Gambar lingkaran besar di karton",
+                    "Bagi menjadi 4 bagian: telur, ulat, kepompong, kupu-kupu",
+                    "Gambar setiap tahap di bagiannya",
+                    "Buat jendela kecil di karton kedua",
+                    "Satukan dengan brad fastener, putar untuk melihat siklus"
+                ],
+                explanation: "Kupu-kupu mengalami metamorfosis sempurna: telur → ulat → kepompong → kupu-kupu dewasa.",
+                tips: ["Cari ulat sungguhan untuk diamati", "Bandingkan dengan siklus hidup lain", "Buat cerita tentang perubahan"]
+            }
+        ];
+
+        // Data eksperimen cuaca
+        const weatherExperiments = [
+            {
+                title: "Pembuat Hujan Mini",
+                emoji: "🌧️",
+                age: "4-6 tahun",
+                time: "15 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami siklus air dan proses terjadinya hujan",
+                materials: ["Gelas bening besar", "Air panas", "Piring kecil", "Es batu", "Plastic wrap"],
+                safetyTips: ["Hati-hati dengan air panas", "Awasi saat menuang air"],
+                steps: [
+                    "Tuang air panas ke dalam gelas (1/3 bagian)",
+                    "Tutup gelas dengan plastic wrap",
+                    "Letakkan es batu di atas plastic wrap",
+                    "Tunggu 5-10 menit",
+                    "Amati 'hujan' kecil yang terbentuk"
+                ],
+                explanation: "Air panas menguap, uap air naik dan mendingin saat bertemu es, lalu mengembun menjadi tetesan air yang jatuh seperti hujan.",
+                tips: ["Jelaskan siklus air di alam", "Bandingkan dengan awan sungguhan", "Diskusikan pentingnya hujan"]
+            },
+            {
+                title: "Awan dalam Botol",
+                emoji: "☁️",
+                age: "5-6 tahun",
+                time: "10 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami pembentukan awan dan kondensasi uap air",
+                materials: ["Botol plastik bening", "Air hangat", "Korek api", "Kertas", "Es batu"],
+                safetyTips: ["Guru yang menyalakan korek", "Pastikan ventilasi baik"],
+                steps: [
+                    "Isi botol dengan sedikit air hangat, kocok, buang",
+                    "Nyalakan kertas sebentar, masukkan ke botol, tutup cepat",
+                    "Tekan botol kuat-kuat",
+                    "Lepaskan tekanan sambil melihat ke dalam botol",
+                    "Amati awan yang terbentuk"
+                ],
+                explanation: "Partikel asap menjadi inti kondensasi, uap air menempel pada partikel ini membentuk awan saat tekanan berubah.",
+                tips: ["Ulangi beberapa kali", "Jelaskan peran debu di atmosfer", "Diskusikan jenis-jenis awan"]
+            },
+            {
+                title: "Tornado dalam Botol",
+                emoji: "🌪️",
+                age: "4-6 tahun",
+                time: "12 menit",
+                safety: "Aman",
+                objective: "Anak memahami gerakan rotasi air dan pembentukan pusaran",
+                materials: ["2 botol plastik sama", "Air", "Pewarna makanan", "Selotip kuat", "Glitter (opsional)"],
+                safetyTips: ["Pastikan botol tertutup rapat", "Awasi anak saat memutar"],
+                steps: [
+                    "Isi satu botol dengan air 3/4 bagian",
+                    "Tambahkan pewarna dan glitter",
+                    "Satukan mulut kedua botol dengan selotip rapat",
+                    "Balik sehingga botol berisi air di atas",
+                    "Putar cepat dan amati tornado terbentuk"
+                ],
+                explanation: "Gerakan rotasi menciptakan gaya sentrifugal yang membentuk pusaran air, mirip dengan tornado di atmosfer.",
+                tips: ["Coba kecepatan putaran berbeda", "Jelaskan tornado sungguhan", "Diskusikan keselamatan saat badai"]
+            },
+            {
+                title: "Termometer Sederhana",
+                emoji: "🌡️",
+                age: "5-6 tahun",
+                time: "20 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami ekspansi termal dan cara mengukur suhu",
+                materials: ["Botol kecil bening", "Sedotan bening", "Air", "Pewarna makanan", "Plastisin", "Spidol"],
+                safetyTips: ["Pastikan tidak ada kebocoran", "Hati-hati dengan air panas"],
+                steps: [
+                    "Isi botol dengan air berwarna hingga hampir penuh",
+                    "Masukkan sedotan hingga menyentuh air",
+                    "Segel dengan plastisin di mulut botol",
+                    "Tandai level air di sedotan",
+                    "Letakkan di tempat hangat/dingin, amati perubahan"
+                ],
+                explanation: "Air memuai saat panas dan menyusut saat dingin, sehingga level air di sedotan naik turun sesuai suhu.",
+                tips: ["Buat skala suhu sederhana", "Bandingkan dengan termometer sungguhan", "Coba di berbagai tempat"]
+            },
+            {
+                title: "Pengukur Angin Sederhana",
+                emoji: "💨",
+                age: "4-6 tahun",
+                time: "18 menit",
+                safety: "Aman",
+                objective: "Anak memahami kekuatan angin dan cara mengukurnya",
+                materials: ["4 gelas plastik kecil", "2 sedotan", "Pin/paku payung", "Pensil dengan penghapus", "Pewarna/spidol"],
+                safetyTips: ["Hati-hati dengan pin", "Pastikan konstruksi stabil"],
+                steps: [
+                    "Warnai satu gelas dengan warna berbeda",
+                    "Lubangi gelas di sisi yang berlawanan",
+                    "Masukkan sedotan membentuk tanda plus",
+                    "Tancapkan pin di tengah ke penghapus pensil",
+                    "Bawa ke luar, hitung putaran gelas berwarna"
+                ],
+                explanation: "Angin mendorong gelas sehingga berputar. Semakin kencang angin, semakin cepat putarannya.",
+                tips: ["Coba di berbagai lokasi", "Buat catatan kecepatan angin", "Diskusikan manfaat dan bahaya angin"]
+            }
+        ];
+
+        // Data eksperimen panca indera
+        const sensesExperiments = [
+            {
+                title: "Tes Rasa Misterius",
+                emoji: "👅",
+                age: "4-6 tahun",
+                time: "15 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami fungsi lidah dan area rasa yang berbeda",
+                materials: ["Gula", "Garam", "Lemon", "Coklat pahit", "Cotton bud", "Air", "Cermin kecil"],
+                safetyTips: ["Pastikan bahan makanan aman", "Siapkan air untuk berkumur"],
+                steps: [
+                    "Minta anak melihat lidah di cermin",
+                    "Celupkan cotton bud ke gula, sentuh ujung lidah",
+                    "Coba garam di sisi lidah",
+                    "Tes lemon di sisi lidah",
+                    "Diskusikan rasa apa yang terasa di mana"
+                ],
+                explanation: "Lidah memiliki area yang lebih sensitif terhadap rasa tertentu: manis di ujung, asin di sisi, asam di sisi, pahit di belakang.",
+                tips: ["Buat peta lidah sederhana", "Diskusikan makanan favorit", "Jelaskan fungsi rasa untuk keselamatan"]
+            },
+            {
+                title: "Teleskop Mata Sederhana",
+                emoji: "👁️",
+                age: "5-6 tahun",
+                time: "20 menit",
+                safety: "Aman",
+                objective: "Anak memahami cara kerja mata dan lensa dalam melihat",
+                materials: ["2 lensa pembesar berbeda ukuran", "Kertas karton", "Selotip", "Objek kecil untuk diamati"],
+                safetyTips: ["Jangan arahkan ke matahari", "Hati-hati dengan lensa kaca"],
+                steps: [
+                    "Buat tabung dari kertas karton",
+                    "Pasang lensa besar di satu ujung",
+                    "Pasang lensa kecil di ujung lain",
+                    "Arahkan ke objek jauh, atur jarak lensa",
+                    "Amati objek yang tampak lebih besar"
+                ],
+                explanation: "Mata bekerja seperti kamera, lensa memfokuskan cahaya ke retina. Teleskop menggunakan lensa untuk memperbesar objek jauh.",
+                tips: ["Bandingkan dengan mata sungguhan", "Coba lihat benda berbeda", "Diskusikan fungsi kacamata"]
+            },
+            {
+                title: "Telepon Kaleng Ajaib",
+                emoji: "👂",
+                age: "3-6 tahun",
+                time: "12 menit",
+                safety: "Aman",
+                objective: "Anak memahami cara suara merambat melalui getaran",
+                materials: ["2 kaleng bekas", "Benang kuat 3 meter", "Paku kecil", "Palu (untuk guru)"],
+                safetyTips: ["Guru yang membuat lubang", "Pastikan kaleng tidak tajam"],
+                steps: [
+                    "Buat lubang kecil di dasar kedua kaleng",
+                    "Masukkan benang melalui lubang",
+                    "Ikat ujung benang di dalam kaleng",
+                    "Minta dua anak berdiri berjauhan, tarik benang kencang",
+                    "Satu bicara ke kaleng, yang lain mendengar"
+                ],
+                explanation: "Suara membuat kaleng bergetar, getaran merambat melalui benang ke kaleng lain, lalu ke telinga sebagai suara.",
+                tips: ["Coba dengan benang kendur vs kencang", "Bandingkan dengan telepon sungguhan", "Diskusikan cara hewan berkomunikasi"]
+            },
+            {
+                title: "Kotak Aroma Misterius",
+                emoji: "👃",
+                age: "4-6 tahun",
+                time: "18 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami fungsi hidung dan kemampuan membedakan bau",
+                materials: ["6 kotak kecil", "Kapas", "Vanilla", "Kayu manis", "Jeruk", "Mint", "Kopi", "Penutup mata"],
+                safetyTips: ["Pastikan bahan aman untuk dihirup", "Jangan gunakan bahan berbahaya"],
+                steps: [
+                    "Isi setiap kotak dengan kapas beraroma berbeda",
+                    "Tutup mata anak dengan penutup mata",
+                    "Minta anak mencium setiap kotak",
+                    "Tebak aroma apa yang tercium",
+                    "Buka mata dan cocokkan dengan bahan asli"
+                ],
+                explanation: "Hidung memiliki reseptor yang mendeteksi molekul bau di udara dan mengirim sinyal ke otak untuk dikenali.",
+                tips: ["Gunakan aroma familiar", "Diskusikan aroma favorit", "Jelaskan peran bau untuk keselamatan"]
+            },
+            {
+                title: "Peta Tekstur Sentuhan",
+                emoji: "✋",
+                age: "3-6 tahun",
+                time: "25 menit",
+                safety: "Aman",
+                objective: "Anak memahami fungsi kulit sebagai indera peraba dan berbagai tekstur",
+                materials: ["Kertas karton", "Amplas", "Kain halus", "Spons", "Aluminium foil", "Lem", "Penutup mata"],
+                safetyTips: ["Pastikan bahan tidak tajam", "Awasi anak saat mata tertutup"],
+                steps: [
+                    "Tempel berbagai bahan bertekstur di karton",
+                    "Buat peta dengan 6-8 area berbeda",
+                    "Tutup mata anak",
+                    "Minta anak meraba setiap area",
+                    "Deskripsikan tekstur: kasar, halus, lembut, keras"
+                ],
+                explanation: "Kulit memiliki reseptor sentuhan yang mendeteksi tekstur, suhu, dan tekanan, membantu kita mengenali objek tanpa melihat.",
+                tips: ["Buat permainan tebak tekstur", "Coba dengan suhu berbeda", "Diskusikan pentingnya sentuhan untuk bayi"]
+            },
+            {
+                title: "Eksperimen Keseimbangan",
+                emoji: "🤸",
+                age: "4-6 tahun",
+                time: "15 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami peran telinga dalam menjaga keseimbangan tubuh",
+                materials: ["Garis lurus di lantai", "Bantal", "Stopwatch", "Penutup mata"],
+                safetyTips: ["Pastikan area aman dari benturan", "Awasi anak saat mata tertutup"],
+                steps: [
+                    "Minta anak berjalan di garis lurus dengan mata terbuka",
+                    "Ulangi dengan mata tertutup",
+                    "Coba berdiri satu kaki dengan mata terbuka",
+                    "Ulangi dengan mata tertutup",
+                    "Bandingkan kemudahan melakukan gerakan"
+                ],
+                explanation: "Telinga bagian dalam memiliki organ keseimbangan yang bekerja sama dengan mata untuk menjaga posisi tubuh.",
+                tips: ["Coba gerakan berputar", "Diskusikan mengapa pusing setelah berputar", "Jelaskan peran olahraga untuk keseimbangan"]
+            }
+        ];
+
+        // Data rencana pembelajaran
+        const lessonPlans = [
+            {
+                title: "Rencana Pembelajaran: Magnet dan Benda",
+                emoji: "🧲",
+                age: "4-5 tahun",
+                time: "45 menit",
+                safety: "Aman",
+                objective: "Anak dapat mengidentifikasi benda yang dapat ditarik magnet dan memahami sifat dasar magnet",
+                materials: ["Magnet batang", "Berbagai benda kecil", "Kertas untuk mencatat", "Kotak untuk mengelompokkan"],
+                safetyTips: ["Gunakan magnet yang aman untuk anak", "Awasi benda kecil agar tidak tertelan"],
+                steps: [
+                    "Pembukaan (5 menit): Tanyakan apa yang anak ketahui tentang magnet",
+                    "Eksplorasi (15 menit): Biarkan anak mencoba magnet dengan berbagai benda",
+                    "Klasifikasi (15 menit): Kelompokkan benda yang menempel dan tidak menempel",
+                    "Diskusi (8 menit): Bahas pola yang ditemukan",
+                    "Penutup (2 menit): Rangkum pembelajaran hari ini"
+                ],
+                explanation: "Pembelajaran ini menggunakan pendekatan saintifik: observasi, hipotesis, eksperimen, dan kesimpulan.",
+                tips: ["Buat catatan observasi anak", "Gunakan pertanyaan terbuka", "Dorong anak untuk membuat prediksi"]
+            },
+            {
+                title: "Rencana Pembelajaran: Siklus Air Sederhana",
+                emoji: "💧",
+                age: "5-6 tahun",
+                time: "60 menit",
+                safety: "Perlu Pengawasan",
+                objective: "Anak memahami konsep dasar siklus air: penguapan, kondensasi, dan presipitasi",
+                materials: ["Gelas bening", "Air panas", "Es batu", "Plastic wrap", "Gambar siklus air"],
+                safetyTips: ["Hati-hati dengan air panas", "Pastikan area kerja aman"],
+                steps: [
+                    "Apersepsi (10 menit): Diskusi tentang hujan dan dari mana asalnya",
+                    "Demonstrasi (20 menit): Eksperimen pembuat hujan mini",
+                    "Observasi (15 menit): Anak mengamati dan mencatat yang terjadi",
+                    "Penjelasan (10 menit): Hubungkan dengan siklus air di alam",
+                    "Evaluasi (5 menit): Tanya jawab tentang pembelajaran"
+                ],
+                explanation: "Pembelajaran ini menggabungkan eksperimen langsung dengan konsep abstrak siklus air.",
+                tips: ["Gunakan analogi sederhana", "Kaitkan dengan pengalaman sehari-hari", "Buat gerakan tubuh untuk setiap tahap"]
+            }
+        ];
+
+        // Fungsi untuk menampilkan eksperimen
+        function displayExperiments(experiments, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            
+            experiments.forEach((exp, index) => {
+                const card = document.createElement('div');
+                card.className = 'bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg card-hover cursor-pointer';
+                card.onclick = () => showExperimentModal(exp);
+                
+                card.innerHTML = `
+                    <div class="text-center mb-4">
+                        <div class="text-5xl mb-3 pulse-gentle">${exp.emoji}</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">${exp.title}</h3>
+                    </div>
+                    <div class="flex justify-center gap-2 mb-4">
+                        <span class="age-badge px-2 py-1 rounded-full text-xs font-semibold">${exp.age}</span>
+                        <span class="time-badge px-2 py-1 rounded-full text-xs font-semibold">${exp.time}</span>
+                        <span class="safety-badge px-2 py-1 rounded-full text-xs font-semibold">${exp.safety}</span>
+                    </div>
+                    <p class="text-gray-600 text-sm text-center leading-relaxed">${exp.objective}</p>
+                    <div class="mt-4 text-center">
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-colors">
+                            Lihat Detail
+                        </button>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        // Fungsi untuk menampilkan modal detail eksperimen
+        function showExperimentModal(experiment) {
+            document.getElementById('modalTitle').textContent = experiment.title;
+            document.getElementById('modalAge').textContent = experiment.age;
+            document.getElementById('modalTime').textContent = experiment.time;
+            document.getElementById('modalSafety').textContent = experiment.safety;
+            document.getElementById('modalObjective').textContent = experiment.objective;
+            document.getElementById('modalExplanation').textContent = experiment.explanation;
+            
+            // Materials
+            const materialsList = document.getElementById('modalMaterials');
+            materialsList.innerHTML = '';
+            experiment.materials.forEach(material => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center text-gray-700';
+                li.innerHTML = `<span class="text-green-500 mr-2">✓</span>${material}`;
+                materialsList.appendChild(li);
+            });
+            
+            // Safety tips
+            const safetyList = document.getElementById('modalSafetyTips');
+            safetyList.innerHTML = '';
+            experiment.safetyTips.forEach(tip => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start';
+                li.innerHTML = `<span class="text-red-500 mr-2 mt-1">⚠️</span>${tip}`;
+                safetyList.appendChild(li);
+            });
+            
+            // Steps
+            const stepsList = document.getElementById('modalSteps');
+            stepsList.innerHTML = '';
+            experiment.steps.forEach((step, index) => {
+                const div = document.createElement('div');
+                div.className = 'flex items-start space-x-3';
+                div.innerHTML = `
+                    <div class="step-number">${index + 1}</div>
+                    <p class="text-gray-700 flex-1">${step}</p>
+                `;
+                stepsList.appendChild(div);
+            });
+            
+            // Tips
+            const tipsList = document.getElementById('modalTips');
+            tipsList.innerHTML = '';
+            experiment.tips.forEach(tip => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start';
+                li.innerHTML = `<span class="text-teal-500 mr-2 mt-1">💡</span>${tip}`;
+                tipsList.appendChild(li);
+            });
+            
+            document.getElementById('experimentModal').classList.remove('hidden');
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal() {
+            document.getElementById('experimentModal').classList.add('hidden');
+        }
+
+        // Fungsi navigasi
+        function showSection(section) {
+            // Sembunyikan semua section
+            const sections = ['mainMenu', 'physics', 'chemistry', 'biology', 'weather', 'senses', 'lesson-plans'];
+            sections.forEach(s => {
+                document.getElementById(s).classList.add('hidden');
+            });
+            
+            // Tampilkan section yang dipilih
+            if (section === 'main') {
+                document.getElementById('mainMenu').classList.remove('hidden');
+            } else {
+                document.getElementById(section).classList.remove('hidden');
+                
+                // Load eksperimen sesuai kategori
+                switch(section) {
+                    case 'physics':
+                        displayExperiments(physicsExperiments, 'physicsExperiments');
+                        break;
+                    case 'chemistry':
+                        displayExperiments(chemistryExperiments, 'chemistryExperiments');
+                        break;
+                    case 'biology':
+                        displayExperiments(biologyExperiments, 'biologyExperiments');
+                        break;
+                    case 'weather':
+                        displayExperiments(weatherExperiments, 'weatherExperiments');
+                        break;
+                    case 'senses':
+                        displayExperiments(sensesExperiments, 'sensesExperiments');
+                        break;
+                    case 'lesson-plans':
+                        displayExperiments(lessonPlans, 'lessonPlans');
+                        break;
+                }
+            }
+        }
+
+        // Inisialisasi aplikasi
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up event listeners
+            document.addEventListener('click', function(e) {
+                if (e.target.id === 'experimentModal') {
+                    closeModal();
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98aaa9bdc5e9fcff',t:'MTc1OTgxMTQyNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+inde
